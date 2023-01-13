@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --main-bg-color: #fcfbf9;
+  --main-text-color: #312c1e;
+  --primary-color: #CAB387;
+  --secondary-color: #C09247;
+  --tertiary-color: #7F056E; 
+}
+
+* {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  margin: 0;
+}
+
+.navbar {
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.navbar h1 {
+  color: var(--tertiary-color);
+}
+.navbar a {
+  margin-left: 1.25rem;
+  text-decoration: none;
+  padding: 6px;
+}
