@@ -1,7 +1,12 @@
+
 const Navbar = () => {
     return ( 
         <nav className="navbar">
-            <h1>marove aqua</h1>
+            <a href="/" className="logo">
+            <img src="./assets/logo.png" alt="logo" style={{
+                width: "150px"
+            }}/>
+            </a>
             <div className="links">
                 <a href="/">Home</a>
                 <a href="/">Gallery</a>
