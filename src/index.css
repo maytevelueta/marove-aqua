@@ -12,6 +12,11 @@
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
   margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -30,6 +35,5 @@ body {
 }
 .navbar a {
   margin-left: 1.25rem;
-  text-decoration: none;
   padding: 6px;
 }
