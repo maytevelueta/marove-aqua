@@ -1,11 +1,12 @@
 import './Navbar.css';
+import logo from "./assets/logo.png";
 
 const Navbar = () => {
     return ( 
         <div className='navbar-container'>
         <nav className="navbar">
             <a href="/" className="logo">
-            <img src="./assets/logo.png" alt="logo" style={{
+            <img src={logo} alt="logo" style={{
                 width: "150px"
             }}/>
             </a>

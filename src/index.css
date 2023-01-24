@@ -1,28 +1,20 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;1,200&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
 :root {
   --main-bg-color: #6d94b5;
   --main-text-color: #fcfbf9;;
   --primary-color: #CAB387;
   --secondary-color: #C09247;
-  --tertiary-color: #7F056E; 
 }
 
 * {
+  font-family: "Playfair Display", "Mulish";
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
+  margin: 0;
+}
+
+body {
   margin: 0;
 }
 
