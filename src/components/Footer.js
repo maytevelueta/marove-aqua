@@ -5,7 +5,7 @@ function Footer ({
     GitHub = <FaGithub />
 }) {
     return ( 
-        <footer className='Footer'>
+        <footer className='footer'>
             <div className='footer-links'>
                 <a href='https://www.instagram.com/marove_aqua/' style={{ fontSize: "2em" }}>{Instagram}</a>
                 <a href='https://github.com/maytevelueta' style={{ fontSize: "2em" }}>{GitHub}</a>
