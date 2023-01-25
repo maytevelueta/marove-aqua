@@ -1,7 +1,7 @@
 const ContactSection = () => {
     return ( 
         <div className="contact-container" >
-            <h1 style={{ textAlign: "center", paddingBottom: "10%" }}>Contact me</h1>
+            <h1>Contact me</h1>
             <p style={{ textAlign: "center" }}>If you have any doubts, I'll be pleased to help you.</p>
             <form>
                 <div className="contact-form">
