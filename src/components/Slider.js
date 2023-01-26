@@ -44,15 +44,24 @@ const Slider = () => {
         <div className='slider'>
             <a href="/gallery">Full Gallery</a>
             <Carousel  
-            showDots={true} 
-            responsive={responsive} 
-            autoPlay={true} 
-            autoPlaySpeed={1000}
+            className='carousel-slider'
+            autoPlay
+            infinite
+            autoPlaySpeed={2000}
+            slidesToSlide={1}
+            responsive={responsive}
             removeArrowOnDeviceType={["largeDesktop", "desktop", "tablet", "mobile"]}
             >
             {slides.map((slide) => (
               <div className='card' key={ slide.id }>
-                <img className='card-image' src={ slide.photo } alt='kingfisher'/>
+                <img className='card-image' src={ slide.photo } alt='kingfisher'  
+                draggable={false}
+                style={{
+                width: "100%",
+                display: "block",
+                height: "70%",
+                margin: "auto"
+              }} />
               </div>
               ))}
             </Carousel>
