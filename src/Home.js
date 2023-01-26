@@ -2,10 +2,13 @@ import Slider from "./components/Slider";
 const Home = () => {
     return ( 
         <div className="home">
-            <h3 style={{
-                fontSize: "100px",
-                padding: "10%"
-            }}>Welcome to my virtual gallery</h3>
+            <h1 className="home-title">
+            <span class="title">Welcome</span>
+            <span>to</span>
+            <span>my</span>
+            <span>virtual</span>
+            <span>gallery.</span>
+            </h1>
             <Slider/>
         </div>
      );
