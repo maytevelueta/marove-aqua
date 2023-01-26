@@ -1,4 +1,4 @@
-
+import Slider from "./components/Slider";
 const Home = () => {
     return ( 
         <div className="home">
@@ -6,6 +6,7 @@ const Home = () => {
                 fontSize: "100px",
                 padding: "10%"
             }}>Welcome to my virtual gallery</h3>
+            <Slider/>
         </div>
      );
 }

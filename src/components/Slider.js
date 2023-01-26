@@ -1,27 +1,28 @@
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 import kingfisher from '../assets/kingfisher.png';
 import cardinal from '../assets/cardinal.png';
 import seahorse from '../assets/seahorse.png';
 import toh from '../assets/toh.png';
 import turtle from '../assets/turtle.png';
 import axolotl from '../assets/axolotl.png';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { useState } from 'react';
 
 
 const Slider = () => {
 
     const responsive = {
-        superLargeDesktop: {
+        largeDesktop: {
           // the naming can be any, depends on you.
-          breakpoint: { max: 4000, min: 3000 },
-          items: 5
+          breakpoint: { max: 4000, min: 1200 },
+          items: 4
         },
         desktop: {
-          breakpoint: { max: 3000, min: 1024 },
+          breakpoint: { max: 1200, min: 991 },
           items: 4
         },
         tablet: {
-          breakpoint: { max: 1024, min: 464 },
+          breakpoint: { max: 991, min: 464 },
           items: 2
         },
         mobile: {
@@ -30,28 +31,30 @@ const Slider = () => {
         }
       };
 
+      const [slides] = useState([
+        { title: "Kingfisher", photo: [kingfisher], body: "", author: "mayte", id: 1 },
+        { title: "Cardinal", photo: [cardinal], body: "", author: "mayte", id: 2 },
+        { title: "Seahorse", photo: [seahorse], body: "", author: "mayte", id: 3 },
+        { title: "Toh", photo: [toh], body: "", author: "mayte", id: 4 },
+        { title: "Turtle", photo: [turtle], body: "", author: "mayte", id: 5 },
+        { title: "Axolotl", photo: [axolotl], body: "", author: "mayte", id: 6 }
+    ]);
+
     return ( 
         <div className='slider'>
             <a href="/gallery">Full Gallery</a>
-            <Carousel responsive={responsive}>
-              <div className='card'>
-                <img className='card-image' src={ kingfisher } alt='kingfisher'/>
+            <Carousel  
+            showDots={true} 
+            responsive={responsive} 
+            autoPlay={true} 
+            autoPlaySpeed={1000}
+            removeArrowOnDeviceType={["largeDesktop", "desktop", "tablet", "mobile"]}
+            >
+            {slides.map((slide) => (
+              <div className='card' key={ slide.id }>
+                <img className='card-image' src={ slide.photo } alt='kingfisher'/>
               </div>
-              <div className='card'>
-                <img className='card-image' src={ cardinal } alt='cardinal'/>
-              </div>
-              <div className='card'>
-                <img className='card-image' src={ seahorse } alt='seahorse'/>
-              </div>
-              <div className='card'>
-                <img className='card-image' src={ toh } alt='toh'/>
-              </div>
-              <div className='card'>
-                <img className='card-image' src={ turtle } alt='turtle'/>
-              </div>
-              <div className='card'>
-                <img className='card-image' src={ axolotl } alt='axolotl'/>
-              </div>
+              ))}
             </Carousel>
         </div>
      );
