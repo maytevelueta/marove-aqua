@@ -43,6 +43,10 @@ body {
   padding: 6px;
 }
 
+.card-image {
+  width: 50%;
+}
+
 .content {
   width: 90%;
   margin: 0 auto;

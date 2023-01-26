@@ -1,9 +1,10 @@
+
 const Home = () => {
     return ( 
         <div className="home">
             <h3 style={{
-                padding: "300px 0 0 300px",
-                fontSize: "100px"
+                fontSize: "100px",
+                padding: "10%"
             }}>Welcome to my virtual gallery</h3>
         </div>
      );
