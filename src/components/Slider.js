@@ -26,10 +26,24 @@ const Slider = () => {
     return ( 
         <div className='slider'>
             <Carousel responsive={responsive}>
-              <div>Item 1</div>
-              <div>Item 2</div>
-              <div>Item 3</div>
-              <div>Item 4</div>
+              <div>
+                <img src="./assets/kingfisher.png" alt='kingfisher'/>
+              </div>
+              <div>
+                <img src='./assets/cardinal.png' alt='cardinal'/>
+              </div>
+              <div>
+                <img src='./assets/seahorse.png' alt='seahorse'/>
+              </div>
+              <div>
+                <img src='./assets/toh.png' alt='toh'/>
+              </div>
+              <div>
+                <img src='../assets/turtle.png' alt='turtle'/>
+              </div>
+              <div>
+                <img src='./assets/axolotl.png' alt='axolotl'/>
+              </div>
             </Carousel>;
         </div>
      );
