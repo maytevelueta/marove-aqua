@@ -4,6 +4,7 @@ import About from './About';
 import Gallery from './Gallery';
 import Contact from './Contact';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Slider from './components/Slider';
 import Footer from './components/Footer';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route exact path='/contact'element={<Contact />}></Route>
         </Routes>
       </div>
+      <Slider />
       <Footer />
     </div>
     </Router>
