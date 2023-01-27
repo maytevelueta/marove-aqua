@@ -44,8 +44,48 @@ body {
 }
 
 .home-title {
-  font-size: "100px";
-  padding: "10%";
+  font-size: 300%;
+  padding: 20% 0 20% 0;
+  text-align: center;
+  transform: scale(0.94);
+  animation: scale 4s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+.title {
+  display: inline-block;
+  opacity: 0;
+  margin: 0.8rem;
+  filter: blur(4px);
+}
+
+.title:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.title:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.title:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.title:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.title:nth-child(5) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 
 .card {
@@ -68,6 +108,9 @@ body {
   margin-bottom: 10rem;
 }
 
+.gallery {
+
+}
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
