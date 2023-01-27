@@ -7,7 +7,7 @@ const Home = () => {
             <span>to</span>
             <span>my</span>
             <span>virtual</span>
-            <span>gallery.</span>
+            <span>gallery</span>
             </h1>
             <Slider/>
         </div>
