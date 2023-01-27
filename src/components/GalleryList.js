@@ -35,7 +35,7 @@ const GalleryList = ({galleryImages}) => {
                 <FontAwesomeIcon icon={faCircleXmark} className="close-btn" onClick={handleCloseModal}  />
                 <FontAwesomeIcon icon={faCircleChevronLeft} className="prev-btn" onClick={prevSlide} />
                 <FontAwesomeIcon icon={faCircleChevronRight} className="next-btn" onClick={nextSlide} />
-          <div className='fullScreenImage'>
+          <div className="fullScreenImage">
             <img src={galleryImages[slideNumber].photo} alt='' />
           </div>
             </div>
