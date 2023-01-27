@@ -42,7 +42,7 @@ const Slider = () => {
 
     return ( 
         <div className='slider'>
-            <a href="/gallery">Full Gallery</a>
+            <a href="/gallery">Visit full gallery</a>
             <Carousel  
             className='carousel-slider'
             autoPlay

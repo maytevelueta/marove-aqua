@@ -5,46 +5,46 @@ import { faCircleChevronLeft, faCircleChevronRight, faCircleXmark } from '@forta
 const GalleryList = ({galleryImages}) => {
 
     const [slideNumber, setSlideNumber] = useState(0)
-    const [openMode, setOpenMode] = useState(false)
+    const [openModal, setOpenModal] = useState(false)
 
-    const handleOpenMode = (index) => {
+    const handleOpenModal = (index) => {
         setSlideNumber(index)
-        setOpenMode(true)
+        setOpenModal(true)
     }
 
-    const handleCloseMode = () => {
-        setOpenMode(false)
+    const handleCloseModal = () => {
+        setOpenModal(false)
     }
 
     const prevSlide = () => {
         slideNumber === 0
-        ? setSlideNumber(galleryImages.length -1)
+        ? setSlideNumber(galleryImages.length - 1)
         : setSlideNumber(slideNumber - 1)
     }
 
     const nextSlide = () => {
-        slideNumber + 1 === galleryImages.length
+        slideNumber + 1 === galleryImages.length 
         ? setSlideNumber(0)
-        : setSlideNumber(setSlideNumber + 1)
+        : setSlideNumber(slideNumber + 1)
     }
 
     return ( 
         <div>
-            {openMode &&
+            {openModal &&
             <div className='gallery-slider'>
-                <FontAwesomeIcon icon={faCircleXmark} className='btnClose' onClick={handleCloseMode}  />
-                <FontAwesomeIcon icon={faCircleChevronLeft} className='btnPrev' onClick={prevSlide} />
-                <FontAwesomeIcon icon={faCircleChevronRight} className='btnNext' onClick={nextSlide} />
+                <FontAwesomeIcon icon={faCircleXmark} className="close-btn" onClick={handleCloseModal}  />
+                <FontAwesomeIcon icon={faCircleChevronLeft} className="prev-btn" onClick={prevSlide} />
+                <FontAwesomeIcon icon={faCircleChevronRight} className="next-btn" onClick={nextSlide} />
           <div className='fullScreenImage'>
-            <img src={galleryImages[slideNumber].img} alt='' />
+            <img src={galleryImages[slideNumber].photo} alt='' />
           </div>
             </div>
             }
             <h1>Gallery</h1>
             <div className="gallery-container">
-            {galleryImages.map((galleryImage, index) => {
+            {galleryImages && galleryImages.map((galleryImage, index) => {
                 return(
-                <div className="gallery-card" key={ index } onClick= { () => handleOpenMode(index) }>
+                <div className="gallery-card" key={ index } onClick= { () => handleOpenModal(index) }>
                     <img className="gallery-image"  src={ galleryImage.photo } alt="projectimg"/>
                 </div>
             )})}
