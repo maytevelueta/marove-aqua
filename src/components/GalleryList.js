@@ -1,34 +1,53 @@
-import kingfisher from '../assets/kingfisher.png';
-import cardinal from '../assets/cardinal.png';
-import seahorse from '../assets/seahorse.png';
-import toh from '../assets/toh.png';
-import turtle from '../assets/turtle.png';
-import axolotl from '../assets/axolotl.png';
-import titWarbler from '../assets/tit-warbler.png';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleChevronLeft, faCircleChevronRight, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
-const GalleryList = () => {
+const GalleryList = ({galleryImages}) => {
 
-    const [galleryImages] = useState([
-        { title: "Kingfisher", photo: [kingfisher], body: "", author: "mayte", id: 1 },
-        { title: "Cardinal", photo: [cardinal], body: "", author: "mayte", id: 2 },
-        { title: "Seahorse", photo: [seahorse], body: "", author: "mayte", id: 3 },
-        { title: "Toh", photo: [toh], body: "", author: "mayte", id: 4 },
-        { title: "Turtle", photo: [turtle], body: "", author: "mayte", id: 5 },
-        { title: "Axolotl", photo: [axolotl], body: "", author: "mayte", id: 6 },
-        { title: "TitWarbler", photo: [titWarbler], body: "", author: "mayte", id: 6 }
-    ]);
+    const [slideNumber, setSlideNumber] = useState(0)
+    const [openMode, setOpenMode] = useState(false)
 
+    const handleOpenMode = (index) => {
+        setSlideNumber(index)
+        setOpenMode(true)
+    }
+
+    const handleCloseMode = () => {
+        setOpenMode(false)
+    }
+
+    const prevSlide = () => {
+        slideNumber === 0
+        ? setSlideNumber(galleryImages.length -1)
+        : setSlideNumber(slideNumber - 1)
+    }
+
+    const nextSlide = () => {
+        slideNumber + 1 === galleryImages.length
+        ? setSlideNumber(0)
+        : setSlideNumber(setSlideNumber + 1)
+    }
 
     return ( 
         <div>
+            {openMode &&
+            <div className='gallery-slider'>
+                <FontAwesomeIcon icon={faCircleXmark} className='btnClose' onClick={handleCloseMode}  />
+                <FontAwesomeIcon icon={faCircleChevronLeft} className='btnPrev' onClick={prevSlide} />
+                <FontAwesomeIcon icon={faCircleChevronRight} className='btnNext' onClick={nextSlide} />
+          <div className='fullScreenImage'>
+            <img src={galleryImages[slideNumber].img} alt='' />
+          </div>
+            </div>
+            }
             <h1>Gallery</h1>
             <div className="gallery-container">
-            {galleryImages.map((galleryImage) => (
-                <div className="gallery-card" key={ galleryImage.id }>
+            {galleryImages.map((galleryImage, index) => {
+                return(
+                <div className="gallery-card" key={ index } onClick= { () => handleOpenMode(index) }>
                     <img className="gallery-image"  src={ galleryImage.photo } alt="projectimg"/>
                 </div>
-            ))}
+            )})}
             </div>
         </div>
      );
