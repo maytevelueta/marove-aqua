@@ -136,7 +136,7 @@ body {
   left: 0;
   right: 0;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,6 +148,7 @@ body {
   position: fixed;
   cursor: pointer;
   opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   z-index: 9999;
 }
@@ -174,8 +175,8 @@ body {
 }
 
 .fullScreenImage {
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
+  width: calc(100% - 60%);
+  height: calc(100% - 0);
   display: flex;
   align-items: center;
   justify-content: center;
