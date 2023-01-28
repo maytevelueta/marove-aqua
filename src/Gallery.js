@@ -22,7 +22,7 @@ function Gallery() {
 
     return ( 
         <div className="gallery">
-            <GalleryList galleryImages={galleryImages}/>
+            <GalleryList galleryImages={galleryImages} />
         </div>
      );
 }

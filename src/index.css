@@ -109,13 +109,13 @@ body {
 }
 
 .gallery {
- 
+  
 }
 .gallery-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: center;
   max-width: 600px;
   margin: 0 auto;
 }
