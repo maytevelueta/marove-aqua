@@ -29,7 +29,7 @@ const Result = () => {
     setTimeout(() => {
       result(false);
     }, 10000);
-    
+
     return ( 
         <div className="contact-container" >
             <h1>Contact me</h1>
@@ -39,7 +39,7 @@ const Result = () => {
                     <input className="input" type="text" id="name" name="name" placeholder="Your name" />
                     <input className="input" type="text" id="email" name="email" placeholder="Your email" />
                 </div>
-                <input className="input" type="text" id="message" name="message" placeholder="Your message" style={{width: "100%"}} />
+                <input className="input" type="text" id="message" name="message" placeholder="Your message" style={{width: "89%"}} />
                 <div>
                 <button type="submit"> Send </button>
                 </div>
