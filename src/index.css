@@ -294,8 +294,8 @@ button[type='submit'] {
     
     .nav-menu {
       position: fixed;
-      left: -110%;
-      top: 120px;
+      left: 100%;
+      top: 0px;
       flex-direction: column;
       color: var(--main-bg-color);
       background-color: rgba(0, 0, 0, 0.7);
@@ -307,7 +307,7 @@ button[type='submit'] {
       transition: .5s;
     }
     .nav-menu.active {
-      left: 0;
+      left: -3%;
     }
     .nav-link, .nav-link  a {
       padding: 0;
