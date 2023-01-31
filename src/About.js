@@ -6,7 +6,7 @@ const About = () => {
         <div className="about-container">
             <h1>About me</h1>
             <div className="about">
-            <img src={ tetraFull } alt="tetra-full" style={{ width: "40%" }}/>
+            <img src={ tetraFull } alt="tetra-full"/>
             <div className="about-text" style={{ fontSize: "120%", alignSelf: "center", paddingLeft: "1rem" }}>
             <p>I'm Mayté from México, and I'm a watercolor enthusiast. Marove Aqua started in early 2021 as a little personal side project to decorate my appartment. Before that, I had never painted with watercolors, and the experience was a game changer to me.</p>
             <br/>
