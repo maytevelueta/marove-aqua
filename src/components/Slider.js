@@ -23,11 +23,11 @@ const Slider = () => {
         },
         tablet: {
           breakpoint: { max: 991, min: 464 },
-          items: 2
+          items: 3
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 1
+          items: 2
         }
       };
 
@@ -41,8 +41,7 @@ const Slider = () => {
     ]);
 
     return ( 
-        <div className='slider'>
-            <a href="/gallery">Visit full gallery</a>
+        <div className='home-slider'>
             <Carousel  
             className='carousel-slider'
             autoPlay
@@ -60,11 +59,13 @@ const Slider = () => {
                 width: "100%",
                 display: "block",
                 height: "70%",
-                margin: "auto"
+                margin: "auto",
+                borderRadius: "1px"
               }} />
               </div>
               ))}
             </Carousel>
+            <a href="/gallery" className="home-slider-link">Visit full gallery</a>
         </div>
      );
 }
