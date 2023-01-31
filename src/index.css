@@ -228,7 +228,6 @@ body {
 .input {
   width: 50%;
   font-size: 1rem;
-  color: var(--secondary-color);
   border:none;
   border-bottom: 1px solid var(--secondary-color);
   padding: 1.2rem;
