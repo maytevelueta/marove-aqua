@@ -33,13 +33,13 @@ const Result = () => {
     return ( 
         <div className="contact-container" >
             <h1>Contact me</h1>
-            <p style={{ textAlign: "center" }}>If you have any questions regarding commissions, please feel free to get in touch.</p>
-            <form ref={form} action="" onSubmit={sendEmail}>
+            <p style={{textAlign: "center"}}>If you have any questions regarding commissions, please feel free to get in touch.</p>
+            <form ref={form} action="" onSubmit={sendEmail} style={{textAlign: "center"}}>
                 <div className="contact-form">
                     <input className="input" type="text" id="name" name="name" placeholder="Your name" />
                     <input className="input" type="text" id="email" name="email" placeholder="Your email" />
                 </div>
-                <input className="input" type="text" id="message" name="message" placeholder="Your message" style={{width: "89%"}} />
+                <input className="input" type="text" id="message" name="message" placeholder="Your message" style={{width: "91%"}} />
                 <div>
                 <button type="submit"> Send </button>
                 </div>
