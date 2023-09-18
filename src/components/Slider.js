@@ -57,7 +57,7 @@ const Slider = () => {
                 draggable={false}
                 style={{
                 width: "100%",
-                display: "block",
+                display: "flex",
                 height: "70%",
                 margin: "auto",
                 borderRadius: "1px"
