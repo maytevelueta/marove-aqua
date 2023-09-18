@@ -261,9 +261,6 @@ button[type='submit'] {
 
 @media (max-width: 576px) {
 
-  * {
-
-  }
 
   .home-title {
     font-size: 150%;
