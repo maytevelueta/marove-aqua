@@ -33,7 +33,7 @@ const Result = () => {
     return ( 
         <div className="contact-container" >
             <h1>Contact me</h1>
-            <p style={{ textAlign: "center" }}>If you have any doubts, I'll be pleased to help you.</p>
+            <p style={{ textAlign: "center" }}>If you have any questions regarding commissions, please feel free to get in touch.</p>
             <form ref={form} action="" onSubmit={sendEmail}>
                 <div className="contact-form">
                     <input className="input" type="text" id="name" name="name" placeholder="Your name" />
