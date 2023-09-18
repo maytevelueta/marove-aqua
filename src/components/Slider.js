@@ -58,7 +58,7 @@ const Slider = () => {
                 style={{
                 width: "100%",
                 display: "flex",
-                height: "70%",
+                height: "80%",
                 margin: "auto",
                 borderRadius: "1px"
               }} />
