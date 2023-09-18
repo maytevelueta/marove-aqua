@@ -59,7 +59,7 @@ const Slider = () => {
                 width: "100%",
                 display: "flex",
                 height: "80%",
-                margin: "5px",
+                margin: "0 5px 0 5px",
                 borderRadius: "5px"
               }} />
               </div>
